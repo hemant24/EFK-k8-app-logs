@@ -1,0 +1,6 @@
+following tutorial at : https://www.digitalocean.com/community/tutorials/how-to-set-up-an-elasticsearch-fluentd-and-kibana-efk-logging-stack-on-kubernetes
+
+
+
+for sample app I have used 
+/Users/hemants/Projects/my-projects/learning-spring/spring-security/gs-serving-web-content-master/complete

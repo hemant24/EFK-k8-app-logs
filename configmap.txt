@@ -1,0 +1,1 @@
+kubectl create configmap app-fluentd-conf --from-file=app.conf --namespace=kube-logging

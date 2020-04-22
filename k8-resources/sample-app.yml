@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-metrics          
+spec:
+  replicas: 1                  
+  selector:
+    matchLabels:
+      app: demo-metrics
+  template:                   
+    metadata:
+      labels:
+        app: demo-metrics
+    spec:
+      containers:
+        - name: demo-metrics
+          image: hemant24/demo-metrics
+          ports:
+            - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-metrics
+spec:
+  ports:                
+  - port: 80            
+    targetPort: 8080     
+  selector:
+    app: demo-metrics
+  type: NodePort
